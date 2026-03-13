@@ -1,0 +1,119 @@
+.fas {
+  font-size:  90px;
+
+  color: tomato;
+  /* position: absolute; */
+  /* bottom: 10px; */
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.gamebox {
+  position: relative;
+  margin-top: 20px;
+  border: 1px solid #000;
+  height: 200px;
+  /* height:300px; */
+}
+.charandground {
+  /* bottom: 0;
+  width: 80px; */
+  /* border: 1px solid #000; */
+}
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 10px;
+  /* color:red; */
+  background: rgb(220, 117, 117);
+}
+.steps{
+  border: 1px solid #000;
+  height: 200px;
+  
+}
+.game,.enter{
+  margin-left: 10px;
+}
+.enter{
+  margin-top: 10px;
+}
+/* .apple{
+  font-size: 30px;
+  position: absolute;
+  display: none;
+  border: 1px solid #000;
+} */
+.step {
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  background: rgb(117, 24, 24);
+}
+
+.step1 {
+  bottom: 20px;
+  left: 120px;
+}
+.btn {
+  display: flex;
+  gap: 10px;
+}
+.up,
+.down {
+  display: none;
+}
+.step2 {
+  bottom: 40px;
+  left: 240px;
+}
+
+.step3 {
+  bottom: 60px;
+  left: 360px;
+}
+.char {
+  position: absolute;
+  /* bottom: 10px; */
+  bottom: 10px;
+  left: 0;
+
+  width: 40px;
+  height: auto;
+  border: 1px solid #000;
+}
+.char:hover {
+  cursor: pointer;
+}
+.image {
+  /* margin-left: 50%; */
+}
+.realImg {
+  border: 10px solid pink;
+  /* width: 400px; */
+  /* height: 400px; */
+}
+.gen,
+.realImg {
+  display: block; /* Changes the image to a block element */
+  margin-left: auto; /* Distributes available left space automatically */
+  margin-right: auto;
+}
+.gen {
+}
+.img {
+  margin-top: 20px;
+  /* width: auto; */
+}
+button {
+  padding: 10px;
+  color: white;
+  background: lightblue;
+  border: none;
+  border-radius: 5px;
+}
+button:hover {
+  cursor: pointer;
+}

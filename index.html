@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="enter">
+      <label for="quantity">Please input number of steps: </label>
+      <input type="number" id="num" name="quantity" min="1" max="10" />
+      <button class="start">Start!</button>
+    </div>
+    <div class="game">
+      <div class="btn">
+        <button class="up">Up</button>
+        <button class="down">Down</button>
+      </div>
+      <div class="gamebox">
+        <div class="char"><i class="fas fa-child"></i></div>
+        <div class="ground"></div>
+        <div class="steps">
+          <!-- <span class="apple">&#x1F34E;</div> -->
+          <!-- <div class="step step1"></div>
+          <div class="step step2"></div>
+          <div class="step step3"></div> -->
+        </div>
+      </div>
+    </div>
+    <div class="image">
+      <button class="gen">Gen pic</button>
+      <div class="img"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
