@@ -22,7 +22,7 @@ let countUp = 0;
 //   gumball: "/image/gum.jfif", // './' means the current directory
 //   history: "/image/history.jfif",
 // };
-const imagePaths = ["/image/1.jfif", "/image/2.jfif", "/image/3.png"];
+const imagePaths = ["image/1.jfif", "image/2.jfif", "image/3.png"];
 let num;
 let apple;
 function handleStart() {
