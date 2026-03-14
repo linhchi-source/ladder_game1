@@ -140,16 +140,24 @@ function handleGen() {
 }
 // upBtn.addEventListener("click", handleUp);
 // downBtn.addEventListener("click", handleDown);
+let enterPush = false;
 document.addEventListener("keydown", function (event) {
   // console.log("hello")
-  if (event.key === "ArrowUp") {
+  if (event.key === "Enter") {
     event.preventDefault();
-    handleUp();
-  } else if (event.key === "ArrowDown") {
-    event.preventDefault();
-    handleDown();
+    handleStart();
+    enterPush = true;
+  }
+  if (enterPush == true) {
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      handleUp();
+    } else if (event.key === "ArrowDown") {
+      event.preventDefault();
+      handleDown();
+    }
   }
 });
-
-startBtn.addEventListener("click", handleStart);
+// document.onload: cursor in input box
+// startBtn.addEventListener("click", handleStart);
 genBtn.addEventListener("click", handleGen);

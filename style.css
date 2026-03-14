@@ -1,7 +1,7 @@
 .fas {
   font-size:  90px;
 
-  color: tomato;
+  color: tomato
   /* position: absolute; */
   /* bottom: 10px; */
 }
@@ -82,7 +82,7 @@
 
   width: 40px;
   height: auto;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 .char:hover {
   cursor: pointer;
