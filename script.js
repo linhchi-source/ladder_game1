@@ -10,61 +10,62 @@ const steps = document.querySelector(".steps");
 let computedStyle = window.getComputedStyle(char);
 let genBtn = document.querySelector(".gen");
 let imgDiv = document.querySelector(".img");
+let countQues = document.querySelector(".count");
+let ques = 0;
 let hasClass = false;
 const upSound = new Audio("audio/up.wav");
 const downSound = new Audio("audio/down.mp3");
 const winSound = new Audio("audio/win.wav");
 let countUp = 0;
-// const downSound = new Audio('path/to/your/audiofile.mp3');
-// const winSound = new Audio("path/to/your/audiofile.mp3");
-// let apple = document.querySelector(".apple");
-// const imagePaths = {
-//   gumball: "/image/gum.jfif", // './' means the current directory
-//   history: "/image/history.jfif",
-// };
 const imagePaths = ["image/1.jfif", "image/2.jfif", "image/3.png"];
 let num;
 let apple;
 function handleStart() {
-  //click start, create
-  // if (steps.firstChild) {
-  //   console.log(steps.classList)
-  //   return;
-  // }
+  //
   if (hasClass == true) {
     return;
   }
-  apple = document.createElement("span");
-  steps.appendChild(apple);
+
+  countQues.textContent = ques;
+  countQues.style.display = "inline-block";
   num = parseInt(input.value, 10);
   // upBtn.style.display = "block";
   // downBtn.style.display = "block";
-  console.log(num);
-
+  // console.log(num);
+  //create num steps. input 3 return 3 new steps
   for (let i = 0; i < num; i++) {
     let step = document.createElement("div");
     step.classList.add("step");
     steps.appendChild(step);
   }
   hasClass = true;
-  const childStep = [...steps.children].slice(1);
+  // const childStep = [...steps.children].slice(1);
+  const childStep = [...steps.children];
+  console.log([...steps.children]);
 
   for (let i = 0; i < childStep.length; i++) {
     // const child = children[i];
     // // Do something with the child element
     // child.style.backgroundColor = 'red';
+    console.log(i);
     childStep[i].style.bottom = (i + 1) * 20 + "px";
+    console.log(childStep[i].style.bottom);
     childStep[i].style.left = (i + 1) * 120 + "px";
+    console.log(childStep[i].style.left);
+
     if (i == childStep.length - 1) {
+      //expect 3
+      console.log("apple is at", i);
       let lastStep = window.getComputedStyle(childStep[i]);
       let lastStepLeft = parseInt(lastStep.left, 10);
       let lastStepBottom = parseInt(lastStep.bottom, 10);
       console.log(lastStepLeft);
       console.log(lastStepBottom);
 
-      console.log(apple);
       // &#x1F34E;
       // apple.textContent = "\u{1F34E}";
+      apple = document.createElement("span");
+      steps.appendChild(apple);
       apple.innerHTML = "&#x1F34E;";
       apple.style.position = "absolute";
       apple.style.bottom = lastStepBottom + 10 + "px";
@@ -152,12 +153,20 @@ document.addEventListener("keydown", function (event) {
     if (event.key === "ArrowUp") {
       event.preventDefault();
       handleUp();
+      // countQues++;
+      ques++;
+      countQues.textContent = ques;
+
+      console.log(ques);
     } else if (event.key === "ArrowDown") {
       event.preventDefault();
       handleDown();
+      // countQues++;
+      ques++;
+      countQues.textContent = ques;
     }
   }
 });
 // document.onload: cursor in input box
 // startBtn.addEventListener("click", handleStart);
-genBtn.addEventListener("click", handleGen);
+// genBtn.addEventListener("click", handleGen);

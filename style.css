@@ -9,6 +9,12 @@
   padding: 0;
   margin: 0;
 }
+.count{
+  padding: 10px;
+  border: 1px solid #000;
+  display: none;
+}
+
 .gamebox {
   position: relative;
   margin-top: 20px;
