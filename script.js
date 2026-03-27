@@ -67,6 +67,8 @@ function handleStart() {
       apple = document.createElement("span");
       steps.appendChild(apple);
       apple.innerHTML = "&#x1F34E;";
+      apple.style.fontSize = "43px";
+
       apple.style.position = "absolute";
       apple.style.bottom = lastStepBottom + 10 + "px";
       apple.style.left = lastStepLeft + 40 + "px";
